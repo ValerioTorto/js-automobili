@@ -51,5 +51,58 @@ let cars = [
         modello: "Murcielago",
         alimentazione: "benzina"
     },
-]
+];
 console.log(cars)
+
+
+//CREO ARRAY DELLE TIPOLOGIE DI AUTO
+
+let listaBenzina = [0];
+let listaDiesel = [0];
+let listaRestanti = [0];
+
+
+//--------------- FUNZIONI ------------------
+
+cars.forEach(function(auto){
+    if (auto.alimentazione == "benzina") {
+        listaBenzina.push(auto);
+    } else if (auto.alimentazione == "diesel") {
+        listaDiesel.push(auto);
+    } else {
+        listaRestanti.push(auto);
+    }
+});
+/*
+function printObject(object) {
+    let string = "";
+
+    string += "{\n";
+
+    for (let key in object) {
+        string += "\t " + key + ": " + object[key] + "\n";
+    }
+
+    string += "}";
+
+    console.log(string);
+
+}
+
+function printArrayBenzina(arrayBenzina) {
+    for (let i = 0; i < arrayBenzina.length; i++) {
+
+        let benzina = arrayBenzina[i];
+
+        console.log("Lo studente n° " + (i + 1) + " è:");
+        printObject(benzina);
+    }
+}
+*/
+
+//STAMPO GLI ARRAY
+console.log(listaBenzina);
+console.log(listaDiesel);
+console.log(listaRestanti);
+
+//printArrayBenzina(cars);
