@@ -57,9 +57,9 @@ console.log(cars)
 
 //CREO ARRAY DELLE TIPOLOGIE DI AUTO
 
-let listaBenzina = [0];
-let listaDiesel = [0];
-let listaRestanti = [0];
+let listaBenzina = [];
+let listaDiesel = [];
+let listaRestanti = [];
 
 
 //--------------- FUNZIONI ------------------
@@ -94,7 +94,7 @@ function printArrayBenzina(arrayBenzina) {
 
         let benzina = arrayBenzina[i];
 
-        console.log("La " + (i) + "° macchina a benzina è:");
+        console.log("La " + (i +1) + "° macchina a benzina è:");
         printObject(benzina);
     }
 }
