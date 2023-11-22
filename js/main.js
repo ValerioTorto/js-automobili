@@ -73,7 +73,7 @@ cars.forEach(function(auto){
         listaRestanti.push(auto);
     }
 });
-/*
+
 function printObject(object) {
     let string = "";
 
@@ -94,15 +94,15 @@ function printArrayBenzina(arrayBenzina) {
 
         let benzina = arrayBenzina[i];
 
-        console.log("Lo studente n° " + (i + 1) + " è:");
+        console.log("La " + (i) + "° macchina a benzina è:");
         printObject(benzina);
     }
 }
-*/
+
 
 //STAMPO GLI ARRAY
 console.log(listaBenzina);
 console.log(listaDiesel);
 console.log(listaRestanti);
 
-//printArrayBenzina(cars);
+printArrayBenzina(listaBenzina);
