@@ -74,7 +74,37 @@ cars.forEach(function(auto){
     }
 });
 
-function printObject(object) {
+function printObjectBenzina(object) {
+    let string = "";
+
+    string += "{\n";
+
+    for (let key in object) {
+        string += "\t " + key + ": " + object[key] + "\n";
+    }
+
+    string += "}";
+
+    console.log(string);
+
+}
+
+function printObjectDiesel(object) {
+    let string = "";
+
+    string += "{\n";
+
+    for (let key in object) {
+        string += "\t " + key + ": " + object[key] + "\n";
+    }
+
+    string += "}";
+
+    console.log(string);
+
+}
+
+function printObjectAltre(object) {
     let string = "";
 
     string += "{\n";
@@ -95,7 +125,28 @@ function printArrayBenzina(arrayBenzina) {
         let benzina = arrayBenzina[i];
 
         console.log("La " + (i +1) + "° macchina a benzina è:");
-        printObject(benzina);
+        printObjectBenzina(benzina);
+    }
+}
+
+function printArrayDiesel(arrayDiesel) {
+    for (let i = 0; i < arrayDiesel.length; i++) {
+
+        let diesel = arrayDiesel[i];
+
+        console.log("La " + (i +1) + "° macchina a diesel è:");
+        printObjectDiesel(diesel);
+    }
+}
+
+
+function printArrayRestante(arrayRestante) {
+    for (let i = 0; i < arrayRestante.length; i++) {
+
+        let restante = arrayRestante[i];
+
+        console.log("La " + (i +1) + "° macchina ad altra alimentazione è:");
+        printObjectAltre(restante);
     }
 }
 
@@ -106,3 +157,5 @@ console.log(listaDiesel);
 console.log(listaRestanti);
 
 printArrayBenzina(listaBenzina);
+printArrayDiesel(listaDiesel);
+printArrayRestante(listaRestanti);
